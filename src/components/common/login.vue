@@ -1,14 +1,26 @@
 <template>
   <div class="login">
-    <h3 class="welcome">欢迎来到闪电的世界</h3>
+    <h3 class="welcome" @click="handleClick">欢迎来到闪电的世界</h3>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
       name: 'login'
+    }
+  },
+  methods: {
+    handleClick() {
+      axios.get('/api/v2/book/1220562').then((res) => {
+        // console.log(res)
+      })
+      axios.get('/api/v1/contents/9386190').then((res) => {
+        // console.log(res)
+      })
     }
   }
 }
