@@ -3,15 +3,27 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const proxyConfig = require('./proxyConfig')
 
 module.exports = {
   dev: {
 
     // Paths
+    // 静态资源文件夹
     assetsSubDirectory: 'static',
+    // 发布上线的时候的路径
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    // 配置跨域请求的代理列表
+    // proxyTable: {
+    //   '/api': {
+    //     target: "https://api.douban.com",
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': ''
+    //     }
+    //   }
+    // },
+    proxyTable: proxyConfig.proxyList,
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
