@@ -3,6 +3,7 @@
     <!--<img src="./assets/logo.png">-->
     <Login></Login>
     <!--<router-view></router-view>-->
+    <ApiTest></ApiTest>
   </div>
 </template>
 
