@@ -8,7 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'global-login',
       // component: () => import('@/components/common/login')
       component: LoginPage
     }

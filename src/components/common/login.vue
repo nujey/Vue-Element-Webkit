@@ -15,9 +15,6 @@ export default {
   },
   methods: {
     handleClick() {
-      axios.get('/api/v2/book/1220562').then((res) => {
-        // console.log(res)
-      })
       axios.get('/cc').then((res) => {
         console.log(res)
       })
