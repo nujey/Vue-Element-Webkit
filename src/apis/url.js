@@ -1,5 +1,5 @@
 const prefix = 'api'
 
 export default {
-  Cc: '/cc'
+  Cc: `${prefix}/cc`
 }

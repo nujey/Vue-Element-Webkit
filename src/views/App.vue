@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <Login></Login>
-    <!--<router-view></router-view>-->
-    <ApiTest></ApiTest>
+    <router-view></router-view>
   </div>
 </template>
 
