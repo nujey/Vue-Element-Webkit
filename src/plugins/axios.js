@@ -1,8 +1,9 @@
 import axios from 'axios'
-import Vue from 'vue';
 
 axios.interceptors.request.use((config) => {
   config.headers['X-Requested-With'] = ['XMLHttpRequest']
+
+  return config
 })
 
 axios.interceptors.response.use((response) => {

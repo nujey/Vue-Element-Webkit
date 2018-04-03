@@ -1,26 +1,12 @@
 <template>
   <div class="login">
-    <h3 class="welcome" @click="handleClick">欢迎来到闪电的世界</h3>
+    <h3 class="welcome">欢迎来到闪电的世界</h3>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 
-export default {
-  data() {
-    return {
-      name: 'login'
-    }
-  },
-  methods: {
-    handleClick() {
-      axios.get('/cc').then((res) => {
-        console.log(res)
-      })
-    }
-  }
-}
+export default {}
 </script>
 <style lang="stylus" scoped>
   .login {

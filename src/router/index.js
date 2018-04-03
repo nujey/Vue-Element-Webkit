@@ -1,16 +1,12 @@
-import Vue from 'vue'
 import Router from 'vue-router'
-import LoginPage from '@/components/common/login'
+import routes from './routes'
 
-Vue.use(Router)
 // 这里的route需要用class的类 封装一次
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'global-login',
-      // component: () => import('@/components/common/login')
-      component: LoginPage
-    }
-  ]
+const router = new Router({
+  routes,
+  mode: 'history'
 })
+router.beforeEach((to, from, next) => {
+  document.title = to.query.title || to.meta.title || '闪电专属'
+})
+export default router
