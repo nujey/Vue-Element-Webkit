@@ -6,7 +6,16 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    // 暂时跳转到首页吧
+    const isLogin = true
+    if (isLogin) {
+      this.$router.push({
+        name: 'timi-home'
+      })
+    }
+  }
 }
 </script>
 
