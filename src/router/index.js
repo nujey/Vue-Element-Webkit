@@ -8,5 +8,6 @@ const router = new Router({
 })
 router.beforeEach((to, from, next) => {
   document.title = to.query.title || to.meta.title || '闪电专属'
+  next()
 })
 export default router
