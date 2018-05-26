@@ -19,6 +19,20 @@ export default [
           title: '闪电专属-404'
         },
         component: () => import('../../views/index/404.vue')
+      }, {
+        path: 'module',
+        name: 'module',
+        meta: {
+          layout: true,
+          title: 'module测试'
+        },
+        component: () => import('../../views/index/test.vue')
+        // component: () => {
+        //   const a = 1
+        //   if (a === 1) {
+        //     import("../../views/moduletest/test.vue")
+        //   }
+        // }
       }
     ]
   }

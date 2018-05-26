@@ -24,8 +24,20 @@ export default [
           layout: true
         },
         component: () => import('../../views/index/404.vue')
+      }, {
+        path: 'module',
+        name: 'module',
+        meta: {
+          layout: true,
+          title: 'module测试'
+        },
+        component: () => {
+          const a = 1
+          if (a === 1) {
+            return import('../../views/moduletest/test.vue')
+          }
+        }
       }
     ]
   }
-  // ...home
 ]
